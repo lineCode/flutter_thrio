@@ -121,6 +121,10 @@ class NavigatorObserverManager extends NavigatorObserver {
         });
       }
     }
+    // 清空 poppedResult
+    ThrioNavigatorImplement.shared()
+        .poppedResultCallbacks
+        .remove(route.settings.name);
   }
 
   @override
@@ -174,5 +178,9 @@ class NavigatorObserverManager extends NavigatorObserver {
         });
       }
     }
+    // 清空 poppedResult
+    ThrioNavigatorImplement.shared()
+        .poppedResultCallbacks
+        .remove(route.settings.name);
   }
 }
